@@ -1436,6 +1436,29 @@ contact
   padding: 20px;
 }
 
+.thankyou_message {
+  display: none; /* Keep it hidden by default */
+  text-align: center; /* Center the text */
+  padding: 20px; /* Add some padding */
+  background-color: #f0f8ff; /* Light blue background */
+  border-radius: 10px; /* Rounded corners */
+  margin-top: 20px; /* Space above the message */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.thankyou_message h2 {
+  color: #333; /* Dark gray text */
+  font-size: 24px; /* Larger font size */
+  font-weight: bold; /* Bold text */
+  margin-bottom: 10px; /* Space below the heading */
+}
+
+.thankyou_message em {
+  color: #007bff; /* Blue color for emphasis */
+  font-style: normal; /* Remove italic style */
+  font-weight: bold; /* Bold text */
+}
+
 /* 
 ---------------------------------------------
 footer
