@@ -917,13 +917,15 @@ parallax & home seperator
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
-  margin-bottom: 30px;
+  margin-bottom: 60px;
+  height: 260px;
   position: relative;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   text-align: center;
+  align-items: center;
 }
 
 .mini .mini-content .mini-box:hover {
@@ -949,6 +951,7 @@ parallax & home seperator
   display: block;
   font-size: 20px;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .mini .mini-content .mini-box span {
@@ -962,11 +965,11 @@ parallax & home seperator
 .mini .mini-content .mini-box strong {
   display: block;
   font-weight: 400;
-  font-size: 17px;
+  font-size: 16px;
   color: #1e1e1e;
   letter-spacing: 0.25px;
-  margin-bottom: 5px;
   margin-top: 20px;
+  text-align: center;
 }
 
 .counter {
@@ -1531,7 +1534,7 @@ footer .copyright {
 preloader
 --------------------------------------------- 
 */
-#preloader {
+/* #preloader {
   overflow: hidden;
   background-image: linear-gradient(135deg, #a759d1 0%, #8261ee 100%);
   left: 0;
@@ -1606,6 +1609,63 @@ preloader
     opacity: 1;
   }
   100% {
+    opacity: 0;
+  }
+} */
+
+/* Preloader Styles */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(135deg, #59d1b5 0%, #112928 100%);
+  color: #fff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#preloader .jumper {
+  display: flex;
+  justify-content: space-around;
+  width: 50px;
+  height: 50px;
+}
+
+#preloader .jumper > div {
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  animation: jumper 1s infinite ease-in-out;
+}
+
+#preloader .jumper > div:nth-child(1) {
+  animation-delay: 0s;
+}
+
+#preloader .jumper > div:nth-child(2) {
+  animation-delay: 0.33333s;
+}
+
+#preloader .jumper > div:nth-child(3) {
+  animation-delay: 0.66666s;
+}
+
+@keyframes jumper {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
     opacity: 0;
   }
 }
